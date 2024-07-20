@@ -2,7 +2,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2203.16141-b31b1b.svg)](https://arxiv.org/abs/2402.01227)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-<img src="framework.jpg" width="300"> <!-- Adjust the width as needed -->
+<img src="framework.jpg" width="500"> <!-- Adjust the width as needed -->
 
 This is a Python and PyTorch code for the prototype learning framework in our paper: 
 

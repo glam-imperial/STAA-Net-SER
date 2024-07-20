@@ -30,12 +30,11 @@ Speech contains rich information on the emotions of humans, and Speech Emotion R
 However, prior works on adversarial attacks in the audio domain primarily rely on iterative gradient-based techniques, which are time-consuming and prone to overfitting the specific threat model. Furthermore, the exploration of sparse perturbations, which have the potential for better stealthiness, remains limited in the audio domain. To address these challenges, we propose a generator-based attack method to generate sparse and transferable adversarial examples to deceive SER models in an end-to-end and efficient manner. We evaluate our method on two widely-used SER datasets, Database of Elicited Mood in Speech (DEMoS) and Interactive Emotional dyadic MOtion CAPture (IEMOCAP), and demonstrate its ability to generate successful sparse adversarial examples in an efficient manner.
 Moreover, our generated adversarial examples exhibit model-agnostic transferability, enabling effective adversarial attacks on advanced victim models.
 
-## Preprocessing
+## Dataset Preperation
+generate the h5 file, with “train_audio”, “train_y”, “dev_audio”, “dev_y”, “test _audio”, “test_y”. 
+
 ```
-python preprocessing/preprocessing.py
-
-python preprocessing/data_split.py
-
+data_h5_gen.py
 ```
 
 ## Training and Test

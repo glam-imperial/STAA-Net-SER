@@ -31,19 +31,39 @@ However, prior works on adversarial attacks in the audio domain primarily rely o
 Moreover, our generated adversarial examples exhibit model-agnostic transferability, enabling effective adversarial attacks on advanced victim models.
 
 ## Dataset Preperation
-generate the h5 file, with “train_audio”, “train_y”, “dev_audio”, “dev_y”, “test _audio”, “test_y”. 
+Generate the h5 file, with “train_audio”, “train_y”, “dev_audio”, “dev_y”, “test _audio”, “test_y”:
 
 ```
 data_h5_gen.py
 ```
 
-## Training and Test
-1. For CNN-8 and ResNet development:
+## SER Models Preparation
+Fine-tune pre-trained foundation models (wav2vec 2.0 and WavLM) and develop the train-from-scratch models (Emo18 and Zhao19):
 ```
-sh run.sh
+ser_models_train.py
 ```
-2. For prototype and criticisms selection: 
+
+## Baseline Adversarial Attackers
+
+For baselines (PGD, SparseFool, One-Pixel), use source threat models to generate the adversarial examples and store them in hdf5 file:
 ```
-sh adv.sh
+baselines_attack_train.py
 ```
+With the generated adversarial examples by baselines, attack the target victim models:
+```
+baselines_attack_eval.py
+```
+
+## STAA-Net attacker
+Train the generator to craft and save the adversarial examples:
+```
+generator_train.py
+```
+With the STAA-Net generated adversarial examples, attack the target victim models:
+```
+generator_eval.py
+```
+
+
+
 
